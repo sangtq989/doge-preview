@@ -16,7 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <body>
+      <header>
+        <h1>React Photo Album | Next.JS</h1>
+      </header>
+
+      <main>{children}</main>
+    </body>
+  </html>
   )
 }

@@ -20,11 +20,12 @@ export async function GET(req: Request) {
 
        try {
         const res = await drive.files.list({
-            pageSize: 100,
+            pageSize: 10,
             q: "mimeType != 'application/vnd.google-apps.folder'",
             pageToken: nextToken == null ? "" : nextToken,
             fields:'*'
         });
+        // console.log(res.data)
         return Response.json(res.data);
     } catch (err:any) {
         console.log(err.message);

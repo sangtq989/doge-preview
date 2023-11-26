@@ -4,8 +4,8 @@ import PhotoAlbum from "react-photo-album";
 
 import NextJsImage from "@/components/NextJsImage";
 
+export default function PhotoGallery({ photos }) {
 
-export default function PhotoGallery({photos}) {
   return (
     <PhotoAlbum
       photos={photos}
